@@ -1966,26 +1966,7 @@ function unityFramework(_0x1455c0) {
         return _0x1d48f4 && _0x1d48f4['\x61\x63\x74\x69\x76\x61\x74\x65\x64'] || _0x57eb6d != 0x0;
     }
     function _0x429328(_0xf2ab45, _0x2fe40a) {
-        var _0x4d4aa4 = _0x46211(_0xf2ab45);
-        if (typeof dump == '\x66\x75\x6e\x63\x74\x69\x6f\x6e')
-            dump(_0x4d4aa4);
-        switch (_0x2fe40a) {
-        case 0x0:
-        case 0x1:
-        case 0x4:
-            console['\x65\x72\x72\x6f\x72'](_0x4d4aa4);
-            return;
-        case 0x2:
-            console['\x77\x61\x72\x6e'](_0x4d4aa4);
-            return;
-        case 0x3:
-        case 0x5:
-            console['\x6c\x6f\x67'](_0x4d4aa4);
-            return;
-        default:
-            console['\x65\x72\x72\x6f\x72']('\x55\x6e\x6b\x6e\x6f\x77\x6e\x20\x63\x6f\x6e\x73\x6f\x6c\x65\x20\x6d\x65\x73\x73\x61\x67\x65\x20\x74\x79\x70\x65\x21'),
-            console['\x65\x72\x72\x6f\x72'](_0x4d4aa4);
-        }
+        return;
     }
     function _0x5037bb(_0x32bf58, _0x380ec3) {
         var _0x5af523 = _0x3c669b();
