@@ -2,15 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dashmetry Loader Test</title>
+  <title>Dashmetry WebGL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script
-    src="./dashmetry-v26021502.loader.js"
-    defer
-  ></script>
+
+  <style>
+    body { margin: 0; background: #000; }
+    #unity-container { width: 100vw; height: 100vh; overflow: hidden; }
+    #unity-canvas { width: 100%; height: 100%; background: #222; }
+  </style>
+
+  <script src="./dashmetry-v26021502.loader.js"></script>
 </head>
+
 <body>
-  <h1>Dashmetry Loader Test</h1>
-  <p>If everything works, the loader script should initialize itself.</p>
+  <div id="unity-container">
+    <canvas id="unity-canvas"></canvas>
+  </div>
+
+  <script>
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+      dataUrl: "https://play2.1games.io/game/dashmetry/26021502/Build/dashmetry-v26021502.data.unityweb",
+      frameworkUrl: "./dashmetry-v26021502.framework.js",
+      codeUrl: "https://play2.1games.io/game/dashmetry/26021502/Build/dashmetry-v26021502.wasm.unityweb",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "Test",
+      productName: "Dashmetry",
+      productVersion: "26021502"
+    }).then(unityInstance => {
+      console.log("Unity loaded", unityInstance);
+    }).catch(err => {
+      console.error("Unity failed to load:", err);
+    });
+  </script>
 </body>
 </html>
